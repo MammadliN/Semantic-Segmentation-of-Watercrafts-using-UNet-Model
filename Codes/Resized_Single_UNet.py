@@ -6,7 +6,7 @@ Created on Mon Jul 24 16:28:59 2023
 @author: nmammadli
 """
 
-from UNet_Model import single_unet_model #softmax 
+from UNet_Model import single_unet_model # 
 
 from Combine_Labels import get_label
 
