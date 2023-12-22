@@ -30,9 +30,6 @@ model_name6 = r"Models/resized_SingleUNet_gray_weights.hdf5"
 model_paths_color = [model_name1, model_name3, model_name5]
 model_paths_gray = [model_name2, model_name4, model_name6]
 
-SIZE_X = 256
-SIZE_Y = 256
-
 # Define the input image path
 image_path1 = r"Test Images/Cruise-ships-1.png"
 
@@ -60,9 +57,6 @@ model_name4 = r"Models/resized_SingleUNet_gray_dropout.hdf5"
 model_paths_color = [model_name1, model_name3, model_name5]
 model_paths_gray = [model_name2, model_name4, model_name6]
 model_paths_bests = [model_name1, model_name2, model_name3, model_name4, model_name5, model_name6]
-
-SIZE_X = 256
-SIZE_Y = 256
 
 # Define the input image path
 image_path1 = r"Test Images/Cruise-ships-1.png"
@@ -95,9 +89,6 @@ model_name6 = r"Models/resized_SingleUNet_gray_weights.hdf5"
 # Define the models lists
 model_paths_bests = [model_name1, model_name2, model_name3, model_name4, model_name5, model_name6]
 
-SIZE_X = 256
-SIZE_Y = 256
-
 # Define the input image path
 image_path1 = r"Test Images/Cruise-ships-1.png"
 
@@ -120,9 +111,6 @@ from Func import process_images
 
 #Models
 model_name1 = r"Models/resized_MultiUNet_color_dropout.hdf5"
-
-SIZE_X = 256
-SIZE_Y = 256
 
 # Define the input folder path
 input_folder = r"Ship_dataset/COCO/train2017"
