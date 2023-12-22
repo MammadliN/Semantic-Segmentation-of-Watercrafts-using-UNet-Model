@@ -53,11 +53,6 @@ from Func import plot_best_prediction
 model_name1 = r"Models/resized_MultiUNet_color_dropout.hdf5"
 model_name4 = r"Models/resized_SingleUNet_gray_dropout.hdf5"
 
-# Define the models lists
-model_paths_color = [model_name1, model_name3, model_name5]
-model_paths_gray = [model_name2, model_name4, model_name6]
-model_paths_bests = [model_name1, model_name2, model_name3, model_name4, model_name5, model_name6]
-
 # Define the input image path
 image_path1 = r"Test Images/Cruise-ships-1.png"
 
