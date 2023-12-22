@@ -14,6 +14,32 @@ This function is used to plot predictions from 6 models in a single plot. It cre
   * `SIZE_X`: Size of images along the x-axis (set to 256 for this project).
   * `SIZE_Y`: Size of images along the y-axis (set to 256 for this project).
 
+#### Usage
+```python
+from Func import plot_multi_predictions
+
+#Models
+model_name1 = r"Models/resized_MultiUNet_color_dropout.hdf5"
+model_name2 = r"Models/resized_MultiUNet_gray_dropout.hdf5"
+model_name3 = r"Models/resized_SingleUNet_color_dropout.hdf5"
+model_name4 = r"Models/resized_SingleUNet_gray_dropout.hdf5"
+model_name5 = r"Models/resized_SingleUNet_color_weights.hdf5"
+model_name6 = r"Models/resized_SingleUNet_gray_weights.hdf5"
+
+# Define the models lists
+model_paths_color = [model_name1, model_name3, model_name5]
+model_paths_gray = [model_name2, model_name4, model_name6]
+
+SIZE_X = 256
+SIZE_Y = 256
+
+# Define the input image path
+image_path1 = r"Test Images/Cruise-ships-1.png"
+
+#Plotting
+plot_multi_predictions(image_path1, model_paths_gray, model_paths_color)
+```
+
 ### 2. `plot_best_prediction`
 
 This function is used to plot predictions from a single model. It takes the following inputs:
@@ -22,6 +48,30 @@ This function is used to plot predictions from a single model. It takes the foll
   * `SIZE_X`: Size of images along the x-axis (set to 256 for this project).
   * `SIZE_Y`: Size of images along the y-axis (set to 256 for this project).
 
+#### Usage
+```python
+from Func import plot_best_prediction
+
+#Models
+model_name1 = r"Models/resized_MultiUNet_color_dropout.hdf5"
+model_name4 = r"Models/resized_SingleUNet_gray_dropout.hdf5"
+
+# Define the models lists
+model_paths_color = [model_name1, model_name3, model_name5]
+model_paths_gray = [model_name2, model_name4, model_name6]
+model_paths_bests = [model_name1, model_name2, model_name3, model_name4, model_name5, model_name6]
+
+SIZE_X = 256
+SIZE_Y = 256
+
+# Define the input image path
+image_path1 = r"Test Images/Cruise-ships-1.png"
+
+#Plotting
+plot_best_prediction(image_path1, model_name1) # Color
+plot_best_prediction(image_path1, model_name4) # Gray
+```
+
 ### 3. `plot_predictions`
 
 This function is used to plot predictions from multiple models separately. It takes the following inputs:
@@ -29,6 +79,32 @@ This function is used to plot predictions from multiple models separately. It ta
   * `model_path`: List of paths to all models for prediction.
   * `SIZE_X`: Size of images along the x-axis (set to 256 for this project).
   * `SIZE_Y`: Size of images along the y-axis (set to 256 for this project).
+
+#### Usage
+```python
+from Func import plot_predictions
+
+#Models
+model_name1 = r"Models/resized_MultiUNet_color_dropout.hdf5"
+model_name2 = r"Models/resized_MultiUNet_gray_dropout.hdf5"
+model_name3 = r"Models/resized_SingleUNet_color_dropout.hdf5"
+model_name4 = r"Models/resized_SingleUNet_gray_dropout.hdf5"
+model_name5 = r"Models/resized_SingleUNet_color_weights.hdf5"
+model_name6 = r"Models/resized_SingleUNet_gray_weights.hdf5"
+
+# Define the models lists
+model_paths_bests = [model_name1, model_name2, model_name3, model_name4, model_name5, model_name6]
+
+SIZE_X = 256
+SIZE_Y = 256
+
+# Define the input image path
+image_path1 = r"Test Images/Cruise-ships-1.png"
+
+#Plotting
+plot_predictions(image_path1, model_paths_bests)
+```
+
 ### 4. `process_images`
 
 This function is used to segment all images in a given folder and save the results in a 'Result' folder within the input folder. It also has an option to plot the segmented images if the plot argument is set to True. It takes the following inputs:
@@ -37,3 +113,20 @@ This function is used to segment all images in a given folder and save the resul
   * `SIZE_X`: Size of images along the x-axis (set to 256 for this project).
   * `SIZE_Y`: Size of images along the y-axis (set to 256 for this project).
   * `plot`: Boolean argument (True or False) to control whether to plot the segmented images.
+
+#### Usage
+```python
+from Func import process_images
+
+#Models
+model_name1 = r"Models/resized_MultiUNet_color_dropout.hdf5"
+
+SIZE_X = 256
+SIZE_Y = 256
+
+# Define the input folder path
+input_folder = r"Ship_dataset/COCO/train2017"
+
+#Plotting
+process_images(input_folder, model_name1)
+```
