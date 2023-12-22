@@ -3,7 +3,7 @@
 Abstract - Semantic segmentation plays a crucial role in computer vision applications, enabling the differentiation of objects within an image by machines. The focal point of this project is the task of semantic segmentation of ships in maritime scenes. The primary objective is the development of an accurate and efficient model using the UNet architecture. The MariBoats dataset, consisting of images instance-segmented with various watercraft, was employed for this purpose. Furthermore, the incorporation of semantic scene understanding involved the utilization of a pre-trained model based on the ADE20K dataset for the labeling of sea and sky regions. The project encompassed approaches utilizing both unpatched and patchified images for ship segmentation, as well as the joint segmentation of ships, sea, and sky.
 
 
-## Functions in Getting Started
+## Functions in Getting Started/main.py
 
 ### 1. `plot_multi_predictions`
 
