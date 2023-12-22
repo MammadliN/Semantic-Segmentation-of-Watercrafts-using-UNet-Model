@@ -7,9 +7,9 @@ Abstract - Semantic segmentation plays a crucial role in computer vision applica
 ### 1. `plot_multi_predictions`
 
 This function is used to plot predictions from 6 models in a single plot. It creates a 2x3 subplot to display the predictions. The function takes the following inputs:
-  -image_path: Path to the input image.
-  -model_paths_gray: List of paths to models for grayscale images.
-  -model_paths_color: List of paths to models for colored images.
+  * `image_path`: Path to the input image.
+  * `model_paths_gray`: List of paths to models for grayscale images.
+  * `model_paths_color`: List of paths to models for colored images.
 
 ### 2. `plot_best_prediction`
 
