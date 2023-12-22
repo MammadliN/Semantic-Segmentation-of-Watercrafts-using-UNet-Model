@@ -93,7 +93,7 @@ plot_predictions(image_path1, model_paths_bests)
 
 ### 4. `process_images`
 
-This function is used to segment all images in a given folder and save the results in a 'Result' folder within the input folder. It also has an option to plot the segmented images if the plot argument is set to True. It takes the following inputs:
+This function is used to segment all images in a given folder and save the results in a 'Result_of_{`model_name`}' folder within the input folder. It also has an option to plot the segmented images if the plot argument is set to True. It takes the following inputs:
   * `input_folder`: Path to the folder containing input images.
   * `model_path`: Path to the model for segmentation.
   * `SIZE_X`: Size of images along the x-axis (set to 256 for this project).
