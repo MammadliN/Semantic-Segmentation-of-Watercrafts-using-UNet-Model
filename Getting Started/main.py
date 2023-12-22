@@ -23,16 +23,12 @@ if __name__ == '__main__':
     model_paths_gray = [model_name2, model_name4, model_name6]
     model_paths_bests = [model_name1, model_name2, model_name3, model_name4, model_name5, model_name6]
     
-    SIZE_X = 256
-    SIZE_Y = 256
-    
     # Define the input image path
-    input_folder = r"Ship_dataset/COCO/train2017"
+    input_folder = r"Test Images/"
     image_path1 = r"Test Images/Cruise-ships-1.png"
     image_path2 = r"Test Images/pexels-matthew-barra-813011.png"
     image_path3 = r"Test Images/f9nrycuxcaau-ds-woxv_cover.png"
     image_path4 = r"Test Images/HERO_Viking-Octantis.png"
-    
     
     #Plotting
     # plot_multi_predictions(image_path1, model_paths_gray, model_paths_color)
