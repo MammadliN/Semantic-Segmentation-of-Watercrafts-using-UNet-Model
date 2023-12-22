@@ -152,14 +152,14 @@ def process_images(input_folder, model_path, SIZE_X=256, SIZE_Y=256, plot=False)
     image_files = [f for f in os.listdir(input_folder) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
 
     # Load the model
-    model_name = model_path[:-4].split('/')[-1]
+    model_name = model_path[:-5].split('/')[-1]
     if 'weights' in model_path:
         model = tf.keras.models.load_model(model_path, custom_objects={'loss': weighted_categorical_crossentropy})
     else:
         model = tf.keras.models.load_model(model_path)
 
     # Create 'Results' folder if it doesn't exist
-    results_folder = os.path.join(input_folder, 'Results')
+    results_folder = os.path.join(input_folder, f'Results_of_{model_name}')
     if not os.path.exists(results_folder):
         os.makedirs(results_folder)
 
